@@ -1,8 +1,10 @@
 # React Super Form
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A React component for creating super dynamic forms with step-by-step navigation and support for JSON or TSX field handlers.
+
+Made to help Community of React Developers to create dynamic forms with ease.
 
 ## Features
 
