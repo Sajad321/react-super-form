@@ -4,6 +4,8 @@
 
 A React component for creating super dynamic forms with step-by-step navigation and support for JSON or TSX field handlers.
 
+Made to help Community of React Developers to create dynamic forms with ease.
+
 ## Features
 
 - Dynamic form generation
