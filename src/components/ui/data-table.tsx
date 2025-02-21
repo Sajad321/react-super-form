@@ -14,7 +14,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useTranslation } from "react-i18next";
-import Marquee from "@/components/ui/Marquee";
+import Marquee from "@/components/ui/marquee";
 import { FolderArchive } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {

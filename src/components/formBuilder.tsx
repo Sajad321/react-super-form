@@ -5,13 +5,10 @@ import Label from "@/components/ui/label";
 import Checkbox from "@/components/ui/checkbox";
 import RadioField from "./Fields/RadioField";
 import MultiSelectField from "./Fields/MultiSelectField";
-import CreatableInputField from "./Fields/CreatableInputField";
 import AsyncSelectField from "./Fields/AsyncSelectField";
 import TableField from "./Fields/TableField";
 import DateField from "./Fields/DateField";
-import ListTableField from "./Fields/ListTableField";
 import FileField from "./Fields/FileField";
-import YearField from "./Fields/YearField";
 import { cn } from "@/lib/utils";
 
 export function generateFormFields({
@@ -25,7 +22,6 @@ export function generateFormFields({
   setOpen,
   open,
   isEdit,
-  tenantId,
 }: {
   serviceType: string;
   form: UseFormReturn<any>;
@@ -83,7 +79,6 @@ export function generateFormFields({
   setOpen: (open: boolean) => void;
   open: boolean;
   isEdit: boolean;
-  tenantId: string;
 }) {
   return fields.map((upperField, fieldIndex) => {
     let label;
@@ -251,28 +246,8 @@ export function generateFormFields({
         );
       case "file":
         return <FileField upperField={upperField} form={form} />;
-      case "listTable":
-        return (
-          <ListTableField
-            upperField={upperField}
-            form={form}
-            updateConstraints={updateConstraints}
-            t={t}
-            serviceType={serviceType}
-          />
-        );
       case "date":
         return <DateField label={label} upperField={upperField} form={form} />;
-      case "year":
-        return (
-          <YearField
-            label={label}
-            upperField={upperField}
-            form={form}
-            min={upperField.min}
-            max={upperField.max}
-          />
-        );
       case "async-select":
         return (
           <AsyncSelectField
@@ -315,7 +290,6 @@ export function generateFormFields({
                 setOpen,
                 open,
                 isEdit,
-                tenantId,
               })}
             </div>
           </div>
@@ -333,7 +307,6 @@ export function generateFormFields({
           setOpen,
           open,
           isEdit,
-          tenantId,
         });
         if (upperField.flat) {
           return (
@@ -400,18 +373,6 @@ export function generateFormFields({
             index={index}
             fieldIndex={fieldIndex}
             isEdit={isEdit}
-            tenantId={tenantId}
-          />
-        );
-      case "creatable-input":
-        return (
-          <CreatableInputField
-            label={label}
-            placeHolder={placeHolder}
-            upperField={upperField}
-            form={form}
-            updateConstraints={updateConstraints}
-            t={t}
           />
         );
       default:

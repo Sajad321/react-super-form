@@ -19,7 +19,6 @@ function TableField({
   index,
   fieldIndex,
   isEdit,
-  tenantId,
 }: {
   serviceType: string;
   upperField: any;
@@ -32,7 +31,6 @@ function TableField({
   index: number;
   fieldIndex: number;
   isEdit: boolean;
-  tenantId: string;
 }) {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -89,7 +87,6 @@ function TableField({
         fieldIndex={fieldIndex}
         upperField={upperField}
         isEdit={isEdit}
-        tenantId={tenantId}
       />
       {!isMobile ? (
         <DataTable

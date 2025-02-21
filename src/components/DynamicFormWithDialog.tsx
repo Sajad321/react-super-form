@@ -15,7 +15,6 @@ const DynamicFormWithDialog = ({
   fieldIndex,
   upperField,
   isEdit,
-  tenantId,
 }: {
   dialogFields: any;
   serviceType: string;
@@ -36,7 +35,6 @@ const DynamicFormWithDialog = ({
   fieldIndex: number;
   upperField: any;
   isEdit: boolean;
-  tenantId: string;
 }) => {
   return (
     <DrawerDialog open={open} setOpen={setOpen}>
@@ -52,7 +50,6 @@ const DynamicFormWithDialog = ({
           setOpen,
           open,
           isEdit,
-          tenantId,
         })}
       </div>
       <Button

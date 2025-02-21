@@ -19,7 +19,7 @@ export function SingleForm({
       <div>
         {config.map((field) => (
           <div key={field.name}>
-            <label>{field.label}</label>
+            <label>{field.name}</label>
             <input type={field.type} name={field.name} />
           </div>
         ))}
